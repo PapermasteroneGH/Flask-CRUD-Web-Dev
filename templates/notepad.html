@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for("static", filename="css/main.css") }}">
+</head>
+<body>
+    {% block content %}
+    <section>
+        <h1>
+            Task Manager Initiated
+        </h1>
+        <table>
+            <tr>
+                <th>
+                    Tasks
+                </th>
+                <th>
+                    Added
+                </th>
+                <th>
+                    Actions
+                </th>    
+            </tr>
+            <tr>
+                <td>
+                    Content
+                </td>
+                <td>
+                    Data
+                </td>
+                <td>
+                    More
+                </td>
+            </tr>
+        </table>
+        <form action="">
+            <input type="text" name="task" id="task" />
+            <input type="submit" value="Add Task" id="butn_add" />
+        </form>
+    </section>
+    {% endblock %}
+</body>
+</html>
